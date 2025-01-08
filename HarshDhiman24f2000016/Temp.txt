@@ -1,3 +1,0 @@
-Temp file for folder creation
-
-Will delete this file soon after adding actual files to this folder.
