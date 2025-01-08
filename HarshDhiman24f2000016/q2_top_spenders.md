@@ -78,84 +78,75 @@ def get_top_spenders(transactions: list, n: int) -> list:
 
 ```
 transactions = [
-    {"transaction_id": 21, "customer_id": 1, "amount": 25000.0, "category": "Electronics"},
-    {"transaction_id": 22, "customer_id": 2, "amount": 800.0, "category": "Groceries"},
-    {"transaction_id": 23, "customer_id": 1, "amount": 1200.0, "category": "Electronics"},
-    {"transaction_id": 24, "customer_id": 3, "amount": 450.0, "category": "Books"},
-    {"transaction_id": 25, "customer_id": 2, "amount": 150.0, "category": "Groceries"},
-    {"transaction_id": 26, "customer_id": 4, "amount": 450.0, "category": "Electronics"},
-    {"transaction_id": 27, "customer_id": 1, "amount": 260.0, "category": "Books"},
-    {"transaction_id": 28, "customer_id": 3, "amount": 700.0, "category": "Clothing"},
-    {"transaction_id": 29, "customer_id": 4, "amount": 3000.0, "category": "Electronics"},
-    {"transaction_id": 30, "customer_id": 5, "amount": 100.0, "category": "Groceries"}
+    {"transaction_id": 21, "customer_id": 1, "amount": 35000.0, "category": "Furniture"},
+    {"transaction_id": 22, "customer_id": 5, "amount": 120.0, "category": "Stationary"},
+    {"transaction_id": 23, "customer_id": 7, "amount": 1400.0, "category": "Electronics"},
+    {"transaction_id": 24, "customer_id": 2, "amount": 450.0, "category": "Books"},
+    {"transaction_id": 25, "customer_id": 8, "amount": 140.0, "category": "Groceries"},
+    {"transaction_id": 26, "customer_id": 2, "amount": 440.0, "category": "Tools"},
+    {"transaction_id": 27, "customer_id": 2, "amount": 260.0, "category": "Books"},
+    {"transaction_id": 28, "customer_id": 7, "amount": 110.0, "category": "Toys"}
 ]
 
 is_equal(
-    get_top_spenders(transactions, 2),
-    [(1, 26460.0), (4, 3450.0)]
+    get_top_spenders(transactions, 5),
+    [(1, 35000.0), (7, 1510.0), (2, 1150.0), (8, 140.0), (5, 120.0)]
 )
 ```
 
 ## Output 1
 
 ```
-[(1, 26460.0), (4, 3450.0)]
+[(1, 35000.0), (7, 1510.0), (2, 1150.0), (8, 140.0), (5, 120.0)]
 ```
 
 ## Input 2
 
 ```
 transactions = [
-    {"transaction_id": 31, "customer_id": 1, "amount": 25000.0, "category": "Electronics"},
-    {"transaction_id": 32, "customer_id": 2, "amount": 800.0, "category": "Groceries"},
-    {"transaction_id": 33, "customer_id": 1, "amount": 1200.0, "category": "Electronics"},
-    {"transaction_id": 34, "customer_id": 3, "amount": 450.0, "category": "Books"},
-    {"transaction_id": 35, "customer_id": 2, "amount": 150.0, "category": "Groceries"},
-    {"transaction_id": 36, "customer_id": 4, "amount": 450.0, "category": "Electronics"},
-    {"transaction_id": 37, "customer_id": 1, "amount": 260.0, "category": "Books"},
-    {"transaction_id": 38, "customer_id": 3, "amount": 700.0, "category": "Clothing"},
-    {"transaction_id": 39, "customer_id": 4, "amount": 3000.0, "category": "Electronics"},
-    {"transaction_id": 40, "customer_id": 5, "amount": 100.0, "category": "Groceries"},
+    {"transaction_id": 31, "customer_id": 5, "amount": 22000.0, "category": "Electronics"},
+    {"transaction_id": 32, "customer_id": 7, "amount": 800.0, "category": "Cosmetics"},
+    {"transaction_id": 34, "customer_id": 9, "amount": 750.0, "category": "Home improvement"},
+    {"transaction_id": 35, "customer_id": 12, "amount": 415.0, "category": "Groceries"},
+    {"transaction_id": 36, "customer_id": 11, "amount": 450.0, "category": "Electronics"},
+    {"transaction_id": 37, "customer_id": 12, "amount": 600.0, "category": "Kids"},
+    {"transaction_id": 38, "customer_id": 5, "amount": 700.0, "category": "Clothing"},
+    {"transaction_id": 40, "customer_id": 12, "amount": 50.0, "category": "Kitchenware"}
 ]
 
 is_equal(
     get_top_spenders(transactions, 3),
-    [(1, 26460.0), (4, 3450.0), (3, 1150.0)]
+    [(5, 22700.0), (12, 1065.0), (7, 800.0)]
 )
 ```
 
 ## Output 2
 
 ```
-[(1, 26460.0), (4, 3450.0), (3, 1150.0)]
+[(5, 22700.0), (12, 1065.0), (7, 800.0)]
 ```
 
 ## Input 3 
 
 ```
 transactions = [
-    {"transaction_id": 41, "customer_id": 1, "amount": 25000.0, "category": "Electronics"},
-    {"transaction_id": 42, "customer_id": 2, "amount": 800.0, "category": "Groceries"},
-    {"transaction_id": 43, "customer_id": 1, "amount": 1200.0, "category": "Electronics"},
-    {"transaction_id": 44, "customer_id": 3, "amount": 450.0, "category": "Books"},
-    {"transaction_id": 45, "customer_id": 2, "amount": 150.0, "category": "Groceries"},
-    {"transaction_id": 46, "customer_id": 4, "amount": 450.0, "category": "Electronics"},
-    {"transaction_id": 47, "customer_id": 1, "amount": 260.0, "category": "Books"},
-    {"transaction_id": 48, "customer_id": 3, "amount": 700.0, "category": "Clothing"},
-    {"transaction_id": 49, "customer_id": 4, "amount": 3000.0, "category": "Electronics"},
-    {"transaction_id": 50, "customer_id": 5, "amount": 100.0, "category": "Groceries"},
+    {"transaction_id": 41, "customer_id": 10, "amount": 5000.0, "category": "Power tools"},
+    {"transaction_id": 43, "customer_id": 4, "amount": 1200.0, "category": "Furniture"},
+    {"transaction_id": 45, "customer_id": 11, "amount": 150.0, "category": "Daily essentials"},
+    {"transaction_id": 46, "customer_id": 12, "amount": 40.0, "category": "Health and Wellness"},
+    {"transaction_id": 50, "customer_id": 10, "amount": 100.0, "category": "Groceries"},
 ]
 
 is_equal(
     get_top_spenders(transactions, 4),
-    [(1, 26460.0), (4, 3450.0), (3, 1150.0), (2, 950.0)]
+    [(10, 5100.0), (4, 1200.0), (11, 150.0), (12, 40.0)]
 )
 ```
 
 ## Output 3
 
 ```
-[(1, 26460.0), (4, 3450.0), (3, 1150.0), (2, 950.0)]
+[(10, 5100.0), (4, 1200.0), (11, 150.0), (12, 40.0)]
 ```
 
 # Private Test Cases
