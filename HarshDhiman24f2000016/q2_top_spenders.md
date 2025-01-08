@@ -155,26 +155,30 @@ is_equal(
 
 ```
 transactions = [
-    {"transaction_id": 51, "customer_id": 1, "amount": 25000.0, "category": "Electronics"},
-    {"transaction_id": 52, "customer_id": 2, "amount": 800.0, "category": "Groceries"},
-    {"transaction_id": 53, "customer_id": 1, "amount": 1200.0, "category": "Electronics"},
-    {"transaction_id": 54, "customer_id": 3, "amount": 450.0, "category": "Books"},
-    {"transaction_id": 55, "customer_id": 2, "amount": 150.0, "category": "Groceries"},
-    {"transaction_id": 56, "customer_id": 4, "amount": 450.0, "category": "Electronics"},
-    {"transaction_id": 57, "customer_id": 1, "amount": 260.0, "category": "Books"},
-    {"transaction_id": 58, "customer_id": 3, "amount": 700.0, "category": "Clothing"},
-    {"transaction_id": 59, "customer_id": 4, "amount": 3000.0, "category": "Electronics"},
-    {"transaction_id": 60, "customer_id": 5, "amount": 100.0, "category": "Groceries"},
+    {"transaction_id": 51, "customer_id": 15, "amount": 74999.0, "category": "Mobiles"},
+    {"transaction_id": 52, "customer_id": 21, "amount": 110.0, "category": "Groceries"},
+    {"transaction_id": 53, "customer_id": 11, "amount": 1100.0, "category": "Electronics"},
+    {"transaction_id": 54, "customer_id": 32, "amount": 440.0, "category": "Books"},
+    {"transaction_id": 55, "customer_id": 92, "amount": 50.0, "category": "Groceries"},
+    {"transaction_id": 56, "customer_id": 84, "amount": 4500.0, "category": "Electronics"},
+    {"transaction_id": 57, "customer_id": 41, "amount": 500.0, "category": "Books"},
+    {"transaction_id": 58, "customer_id": 32, "amount": 1100.0, "category": "Clothing"},
+    {"transaction_id": 59, "customer_id": 84, "amount": 3000.0, "category": "Electronics"},
+    {"transaction_id": 60, "customer_id": 15, "amount": 100.0, "category": "Groceries"},
+    {"transaction_id": 57, "customer_id": 41, "amount": 240.0, "category": "Books"},
+    {"transaction_id": 58, "customer_id": 32, "amount": 1200.0, "category": "Clothing"},
+    {"transaction_id": 59, "customer_id": 84, "amount": 35000.0, "category": "Electronics"},
+    {"transaction_id": 60, "customer_id": 15, "amount": 220.0, "category": "Groceries"},
 ]
 
 is_equal(
-    get_top_spenders(transactions, 5),
-    [(1, 26460.0), (4, 3450.0), (3, 1150.0), (2, 950.0), (5, 100.0)]
+    get_top_spenders(transactions, 6),
+    [(15, 75319.0), (84, 42500.0), (32, 2740.0), (11, 1100.0), (41, 740.0), (21, 110.0)]
 )
 ```
 
 ## Output 1
 
 ```
-[(1, 26460.0), (4, 3450.0), (3, 1150.0), (2, 950.0), (5, 100.0)]
+[(15, 75319.0), (84, 42500.0), (32, 2740.0), (11, 1100.0), (41, 740.0), (21, 110.0)]
 ```
