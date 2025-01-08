@@ -7,7 +7,27 @@ tags: ['sample tag1', 'sample tag2']
 Create a program that will find LCM and HCF of 2 or more numbers.
 
 LCM:
-Lowest common multiple
+Lowest common multiple (or least common multiple)
+
+e.g. Find LCM of [6,12,15,30]
+
+lcm(6,12) = 12
+lcm(12,15) = 60
+lcm(60,30) = 60
+
+=> lcm([6,12,15,30]) = 60
+
+
+HCF:
+Highest common factor (or Greatest common divisor)
+
+e.g. Find HCF of [6,12,15,30]
+
+hcf(6,12) = 6
+hcf(6,15) = 3
+hcf(3,30) = 3
+
+=> hcf([6,12,15,30]) = 3
 
 # Solution
 ```python test.py  -r 'python test.py'
@@ -92,19 +112,49 @@ print(hcf_of_list(numbers))
 ## Input 1
 
 ```
-2
-3
-5
+6
+9
 done
 ```
 
 ## Output 1
 
 ```
-30
+18
+3
+```
+
+## Input 2
+
+```
+3
+1
+done
+```
+
+## Output 2
+
+```
+3
 1
 ```
 
+## Input 3
+
+```
+15    
+105
+85
+40
+done
+```
+
+## Output 3
+
+```
+14280
+5
+```
 
 # Private Test Cases
 
