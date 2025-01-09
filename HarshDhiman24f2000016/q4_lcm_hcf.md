@@ -1,6 +1,6 @@
 ---
 title: LCM HCF
-tags: ['sample tag1', 'sample tag2']
+tags: ['LCM', 'HCF', 'GCD', 'Function', 'Input Output', 'loop', 'multiple input']
 ---
 
 # Problem Statement
@@ -28,6 +28,12 @@ hcf(6,15) = 3
 hcf(3,30) = 3
 
 => hcf([6,12,15,30]) = 3
+
+For simplicity, you may assume that:
+User will always give you atlest 2 integers before giving 'done'.
+User either give you +ve interger or 'done', noting else. 
+It simply means you don't need error-handling here.
+
 
 # Solution
 ```python test.py  -r 'python test.py'
@@ -127,6 +133,58 @@ done
 ## Input 2
 
 ```
+24
+36
+18
+done
+```
+
+## Output 2
+
+```
+72
+6
+```
+
+## Input 3
+
+```
+24    
+36
+18
+48
+done
+```
+
+## Output 3
+
+```
+144
+6
+```
+
+# Private Test Cases
+
+## Input 1
+
+```
+3
+5
+10
+12
+done
+```
+
+## Output 1
+
+```
+60
+1
+```
+
+## Input 2
+
+```
 3
 1
 done
@@ -154,23 +212,4 @@ done
 ```
 14280
 5
-```
-
-# Private Test Cases
-
-## Input 1
-
-```
-3
-5
-10
-12
-done
-```
-
-## Output 1
-
-```
-60
-1
 ```
