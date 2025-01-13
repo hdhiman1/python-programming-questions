@@ -21,12 +21,14 @@ cocoa_powder : 28%
 chewing_gum : 28%
 churan_for_pan : 28%
 
+use the gst_rates dictionary to implement the function.
+
 
 **Example**
 ```py3
-final_price(100, 'milk') # return 128.00
-final_price(102, 'labelled_curd') # return 102.51
-is_two_digit_even(220 ,'unlabelled_curd') # return 220.00
+final_price(100, 'milk', gst_rates) # return 128.00
+final_price(102, 'labelled_curd', gst_rates) # return 102.51
+is_two_digit_even(220 ,'unlabelled_curd', gst_rates) # return 220.00
 ```
 
 # Solution
