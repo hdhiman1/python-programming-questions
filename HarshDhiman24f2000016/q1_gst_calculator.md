@@ -62,6 +62,7 @@ def final_price(price: int, category: str, gst_rates: dict) -> float:
     Arguments:
     price: int - price of item.
     category: str - category of item (milk, mobile, laptop, etc)
+    gst_rates: dict - dict with item names as keys and respective gst rates as values.
 
     Return: float - final sales price after tax
     '''
