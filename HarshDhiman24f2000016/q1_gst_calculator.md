@@ -36,7 +36,23 @@ is_two_digit_even(220 ,'unlabelled_curd') # return 220.00
 # some prefix   
 </prefix>
 <template>
-def final_price(price: int, category: str) -> float:
+
+gst_rates = {
+    "milk" : 0,
+    "unlabeled_curd" : 0, 
+    "labelled_curd" : 5, 
+    "ghee" : 12, 
+    "butter" : 12, 
+    "cheese" : 12, 
+    "laptop" : 18, 
+    "mobile" : 18, 
+    "custard_powder" : 28, 
+    "cocoa_powder" : 28, 
+    "chewing_gum" : 28, 
+    "churan_for_pan" : 28
+    }
+
+def final_price(price: int, category: str, gst_rates: dict) -> float:
     '''
     Given initial price and GST rates, return final price after adding gst.
     Round it off upto 2 digits.
@@ -50,16 +66,10 @@ def final_price(price: int, category: str) -> float:
     <los>...</los>
     <sol>
     
-    if category == 'milk' or category == 'unlabeled_curd':
-        gst = 0
-    elif category == 'ghee' or category == 'butter' or category == 'cheese':
-        gst = 12
-    elif category == 'laptop' or category == 'mobile':
-        gst = 18
-    elif category == 'custard_powder' or category == 'cocoa_powder' or category == 'chewing_gum' or category == 'churan_for_pan':
-        gst = 28
-    elif category == 'labelled_curd':
-        gst = 5
+    gst = gst_rates[category]
+
+
+    
     final_price =  price + price*(gst/100)
     return round(final_price, 2)
     
@@ -79,7 +89,7 @@ def final_price(price: int, category: str) -> float:
 ## Input 1
 
 ```
-is_equal(final_price(100, 'milk'), 100.0)
+is_equal(final_price(100, 'milk', gst_rates), 100.0)
 ```
 
 ## Output 1
@@ -91,7 +101,7 @@ is_equal(final_price(100, 'milk'), 100.0)
 ## Input 2
 
 ```
-is_equal(final_price(610, 'ghee'), 683.2)
+is_equal(final_price(610, 'ghee', gst_rates), 683.2)
 ```
 
 ## Output 2
@@ -103,7 +113,7 @@ is_equal(final_price(610, 'ghee'), 683.2)
 ## Input 3 
 
 ```
-is_equal(final_price(50000, 'mobile'), 59000.0)
+is_equal(final_price(50000, 'mobile', gst_rates), 59000.0)
 ```
 
 ## Output 3
@@ -118,7 +128,7 @@ is_equal(final_price(50000, 'mobile'), 59000.0)
 ## Input 1
 
 ```
-is_equal(final_price(100, 'milk'), 100.0)
+is_equal(final_price(100, 'milk', gst_rates), 100.0)
 ```
 
 ## Output 1
@@ -130,7 +140,7 @@ is_equal(final_price(100, 'milk'), 100.0)
 ## Input 2
 
 ```
-is_equal(final_price(100, 'unlabeled_curd'), 100.0)
+is_equal(final_price(100, 'unlabeled_curd', gst_rates), 100.0)
 ```
 
 ## Output 2
@@ -142,7 +152,7 @@ is_equal(final_price(100, 'unlabeled_curd'), 100.0)
 ## Input 3
 
 ```
-is_equal(final_price(100, 'labelled_curd'), 105.0)
+is_equal(final_price(100, 'labelled_curd', gst_rates), 105.0)
 ```
 
 ## Output 3
@@ -154,7 +164,7 @@ is_equal(final_price(100, 'labelled_curd'), 105.0)
 ## Input 4
 
 ```
-is_equal(final_price(100, 'ghee'), 112.0)
+is_equal(final_price(100, 'ghee', gst_rates), 112.0)
 ```
 
 ## Output 4
@@ -166,7 +176,7 @@ is_equal(final_price(100, 'ghee'), 112.0)
 ## Input 5
 
 ```
-is_equal(final_price(100, 'butter'), 112.0)
+is_equal(final_price(100, 'butter', gst_rates), 112.0)
 ```
 
 ## Output 5
@@ -178,7 +188,7 @@ is_equal(final_price(100, 'butter'), 112.0)
 ## Input 6
 
 ```
-is_equal(final_price(100, 'cheese'), 112.0)
+is_equal(final_price(100, 'cheese', gst_rates), 112.0)
 ```
 
 ## Output 6
@@ -190,7 +200,7 @@ is_equal(final_price(100, 'cheese'), 112.0)
 ## Input 7
 
 ```
-is_equal(final_price(100, 'laptop'), 118.0)
+is_equal(final_price(100, 'laptop', gst_rates), 118.0)
 ```
 
 ## Output 7
@@ -202,7 +212,7 @@ is_equal(final_price(100, 'laptop'), 118.0)
 ## Input 8
 
 ```
-is_equal(final_price(100, 'mobile'), 118.0)
+is_equal(final_price(100, 'mobile', gst_rates), 118.0)
 ```
 
 ## Output 8
@@ -214,7 +224,7 @@ is_equal(final_price(100, 'mobile'), 118.0)
 ## Input 9
 
 ```
-is_equal(final_price(100, 'custard_powder'), 128.0)
+is_equal(final_price(100, 'custard_powder', gst_rates), 128.0)
 ```
 
 ## Output 9
@@ -226,7 +236,7 @@ is_equal(final_price(100, 'custard_powder'), 128.0)
 ## Input 10
 
 ```
-is_equal(final_price(100, 'cocoa_powder'), 128.0)
+is_equal(final_price(100, 'cocoa_powder', gst_rates), 128.0)
 ```
 
 ## Output 10
@@ -238,7 +248,7 @@ is_equal(final_price(100, 'cocoa_powder'), 128.0)
 ## Input 11
 
 ```
-is_equal(final_price(100, 'chewing_gum'), 128.0)
+is_equal(final_price(100, 'chewing_gum', gst_rates), 128.0)
 ```
 
 ## Output 11
@@ -250,7 +260,7 @@ is_equal(final_price(100, 'chewing_gum'), 128.0)
 ## Input 12
 
 ```
-is_equal(final_price(100, 'churan_for_pan'), 128.0)
+is_equal(final_price(100, 'churan_for_pan', gst_rates), 128.0)
 ```
 
 ## Output 12
